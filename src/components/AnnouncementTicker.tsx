@@ -1,9 +1,7 @@
 const MOCK_NOTICES = [
-  'Q2 Appraisal cycle begins May 1st — watch for your manager\'s calendar invite',
-  'Office closed on May 1st for Labour Day',
-  'Please update emergency contact details in TekOne by April 30th',
-  'Health insurance renewal forms due by April 25th — check your email',
-  'IT helpdesk hours: Monday–Friday, 9am – 6pm IST',
+  "Q2 Appraisal cycle begins April 2026 — watch for your manager's calendar invite",
+  "Please use TekOne going ahead. Update emergency contact details in TekOne",
+  "Health insurance renewal by April 25th",
 ]
 
 export default function AnnouncementTicker() {

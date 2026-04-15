@@ -5,43 +5,42 @@
 @tailwind utilities;
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { background-color: #0A0F1E; color: #E8F0FE; font-family: 'DM Sans', sans-serif; }
+
+body {
+  background-color: #F0F4FB;
+  color: #1A3A6B;
+  font-family: 'DM Sans', sans-serif;
+}
 
 @layer utilities {
-  .text-gradient {
-    background: linear-gradient(135deg, #60A5FA 0%, #F59E0B 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  .card {
+    background: #FFFFFF;
+    border: 1px solid #DBEAFE;
+    border-radius: 1rem;
+    box-shadow: 0 1px 4px rgba(26,58,107,0.06), 0 4px 16px rgba(26,58,107,0.04);
   }
-  .glass {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-  }
-  .glass-hover:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.15);
+  .card-hover:hover {
+    border-color: #93C5FD;
+    box-shadow: 0 4px 20px rgba(29,111,196,0.12);
+    transform: translateY(-1px);
   }
 }
 
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #0A0F1E; }
-::-webkit-scrollbar-thumb { background: #1A3A6B; border-radius: 3px; }
+::-webkit-scrollbar-track { background: #F0F4FB; }
+::-webkit-scrollbar-thumb { background: #BFDBFE; border-radius: 3px; }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(16px); }
   to { opacity: 1; transform: translateY(0); }
-}
-@keyframes pulse-slow {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 0.8; }
 }
 @keyframes ticker {
   0% { transform: translateX(100%); }
   100% { transform: translateX(-100%); }
 }
-.animate-fade-in-up { animation: fadeInUp 0.5s ease forwards; }
-.animate-pulse-slow { animation: pulse-slow 3s ease-in-out infinite; }
-.animate-ticker { animation: ticker 30s linear infinite; }
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.45s ease forwards;
+}
+.animate-ticker { animation: ticker 35s linear infinite; }
 .animate-ticker:hover { animation-play-state: paused; }
